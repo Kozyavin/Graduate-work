@@ -1,5 +1,5 @@
 FROM node:erbium-alpine3.12
-WORKDIR /opt/app
+WORKDIR /app
 COPY . .
 RUN npm install
 CMD ["npm", "start"]
