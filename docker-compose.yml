@@ -3,7 +3,7 @@ services:
   mysql:
     image: mysql:8.0.18
     ports:
-      - '3300:3306'
+      - '3306:3306'
     volumes:
       - ./data-mysql:/var/lib/mysql
     environment:
@@ -24,6 +24,6 @@ services:
       - POSTGRES_PASSWORD=pass
   node-app:
     build: ./gate-simulator  # собираем образ из Dockerfile в каталоге gate-simulator
-    image: node-app:1.0
+    image: gate-simulator:1.0
     ports:
       - '9999:9999'
