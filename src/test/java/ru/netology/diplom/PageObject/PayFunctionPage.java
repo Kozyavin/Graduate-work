@@ -1,7 +1,9 @@
 package ru.netology.diplom.PageObject;
 import ru.netology.diplom.data.DataHelper;
+
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PayFunctionPage {
@@ -23,6 +25,8 @@ public class PayFunctionPage {
             $("[value=''].input__control").setValue(card.getName());
 
             $$("html button").findBy(text(" Продолжить")).click();
+
+            $$("html .notification__title").findBy(text("Успешно")).shouldHave(visible, Duration.ofSeconds(6));
 
         }
     }

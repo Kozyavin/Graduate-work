@@ -9,7 +9,7 @@ import ru.netology.diplom.PageObject.StartPage;
 import ru.netology.diplom.data.DataHelper;
 
 import static com.codeborne.selenide.Selenide.open;
-import static java.lang.Thread.sleep;
+
 
 public class PayTest {
 
@@ -40,7 +40,6 @@ public class PayTest {
         PayFunctionPage page = new PayFunctionPage();
         var user1 = DataHelper.validClient();
         page.enterDataUser(user1);
-        sleep(5000,7000);
 
     }
 }
