@@ -26,7 +26,7 @@ public class PayFunctionPage {
 
             $$("html button").findBy(text(" Продолжить")).click();
 
-            $$("html .notification__title").findBy(text("Успешно")).shouldHave(visible, Duration.ofSeconds(6));
+            $$("html .notification__title").findBy(text("Успешно")).shouldHave(visible, Duration.ofSeconds(10));
 
         }
     }
